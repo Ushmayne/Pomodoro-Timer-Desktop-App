@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pomodoro Timer</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="phase">Work Session</h1>
+      <div class="timer" id="timer">25:00</div>
+      <div class="controls">
+        <button id="startBtn" class="btn btn-start">Start</button>
+        <button id="pauseBtn" class="btn btn-pause" disabled>Pause</button>
+        <button id="resetBtn" class="btn btn-reset">Reset</button>
+      </div>
+      <div class="sessions-info">
+        <p>Sessions completed: <span id="sessions">0</span></p>
+      </div>
+    </div>
+    <script type="module" src="/src/renderer.js"></script>
+  </body>
+</html>
