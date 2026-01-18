@@ -15,13 +15,9 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  -webkit-app-region: drag;
-  cursor: move;
 }
 
-body.break {
-  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
-}
+
 
 .container {
   text-align: center;
@@ -32,6 +28,16 @@ body.break {
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   border: 1px solid rgba(255, 255, 255, 0.18);
   min-width: 400px;
+  transition: background 0.5s ease;
+
+}
+
+.container.work {
+  background: linear-gradient(135deg, #f70404 0%, #eb4d48 100%);
+}
+
+.container.break {
+  background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
 }
 
 h1 {
@@ -40,9 +46,15 @@ h1 {
   font-weight: 300;
   margin-bottom: 30px;
   letter-spacing: 2px;
-
+  -webkit-app-region: drag;
+  cursor: move;
 }
 
+
+p{
+  -webkit-app-region: drag;
+  cursor: move;
+}
 .timer {
   font-size: 96px;
   font-weight: bold;
@@ -51,6 +63,8 @@ h1 {
   letter-spacing: 10px;
   margin: 40px 0;
   text-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  -webkit-app-region: drag;
+  cursor: move;
 }
 
 .controls {
@@ -71,6 +85,7 @@ h1 {
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: 2px solid rgba(20, 17, 17, 0.3);
 }
 
 .btn-start {

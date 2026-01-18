@@ -16,6 +16,7 @@ const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
 const resetBtn = document.getElementById('resetBtn');
 const sessionsDisplay = document.getElementById('sessions');
+const container = document.querySelector('.container');
 
 function formatTime(seconds) {
   const mins = Math.floor(seconds / 60);
@@ -29,9 +30,11 @@ function updateDisplay() {
   
   // Change background color based on phase
   if (isWorkSession) {
-    document.body.classList.remove('break');
+    container.classList.remove('break');
+    container.classList.add('work');
   } else {
-    document.body.classList.add('break');
+    container.classList.remove('work');
+    container.classList.add('break');
   }
 }
 
